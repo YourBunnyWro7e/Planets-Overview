@@ -1,0 +1,30 @@
+<div ngClass="navigation">
+  <div *ngIf="width<=800" ngClass="MenuButton">
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+    <i class="fab fa-angular fa-2x"></i>
+    </button>
+
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item routerLink=".">Кабінет</button>
+      <button mat-menu-item routerLink="schedule">Польоти</button>
+      <button mat-menu-item routerLink="gallery/list">Галерея</button>
+    </mat-menu>
+
+  </div>
+  <div *ngIf="width>800" ngClass="buttons">
+    <a mat-button routerLink=".">Мій Кабінет</a>
+    <a mat-button routerLink="schedule">Розклад польотів</a>
+    <a mat-button routerLink="gallery/list">Галерея</a>
+  </div>
+  <div ngClass="list">
+    <div ngClass="signs">
+      <div><i class="sign fas fa-phone"></i> +380983029394</div>
+      <div><i class="sign fab fa-twitter"></i></div>
+      <div><i class="sign fab fa-facebook-f"></i></div>
+
+    </div>
+  </div>
+</div>
+
+

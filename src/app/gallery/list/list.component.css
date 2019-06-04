@@ -1,0 +1,91 @@
+.Wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: normal;
+  padding: 40px;
+}
+
+.TextBlock {
+  display: flex;
+}
+
+.description {
+  width: 200px;
+}
+
+.imgBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.list {
+  position: fixed;
+  z-index: 3;
+}
+
+.img {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  -webkit-animation: spin 12s linear infinite;
+  -moz-animation: spin 12s linear infinite;
+  animation: spin 12s linear infinite;
+}
+
+.planet{
+  margin-left: 10px;
+  position: absolute;
+  transition: 2s;
+}
+
+.planet:hover {
+  transition: 2s ease-in-out;
+  transform: scale(1.4) rotate(360deg);
+ /* -webkit-animation:  12s spin;
+  -moz-animation: 12s spin;
+  animation:  12s spin;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  z-index: 1000;*/
+}
+
+.bg {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+
+  width: fit-content;
+  height: 100vh;
+}
+
+@media screen and (max-width: 900px){
+  .bg{
+    flex-direction: column;
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

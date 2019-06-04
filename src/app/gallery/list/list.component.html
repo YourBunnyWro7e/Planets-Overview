@@ -1,0 +1,33 @@
+<div ngClass="Wrapper" id="Wrapper">
+
+  <mat-nav-list ngClass="list">
+    <div *ngFor="let link of links,let ind = index">
+      <a on-mouseover="over(link, $event, ind)" class="link" mat-list-item href="#"> {{ link }} </a>
+    </div>
+  </mat-nav-list>
+
+  <div [ngClass]="hovered ? 'showInfo' : 'hideInfo'">
+      <div>
+        <p>{{planetInfo.items[0].data[0].title}}</p>
+      </div>
+
+      <div ngClass="TextBlock">
+
+        <div ngClass="description"><p>{{planetInfo.items[0].data[0].description}}</p></div>
+
+        <div ngClass="imgBlock" id="imgBlock">
+
+          <div>
+            <p>{{planetInfo.items[0].data[0].secondary_creator}}</p>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+
+  <div ngClass="bg" id="planets" *ngFor="let link of (links), let ind = index">
+    <img ngClass="planet" #planets src="../../../assets/{{link}}.png" id="planet{{ind}}" alt="Planet">
+  </div>
+
+</div>

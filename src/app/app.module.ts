@@ -1,15 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+import {HeaderModule} from './header/header.module';
 import { AppComponent } from './app.component';
+import { PlanetAnimationDirective } from './gallery/list/planet-animation.directive';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlanetAnimationDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HeaderModule, BrowserAnimationsModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,64 @@
+.CabinetWrapper {
+  display: flex;
+}
+
+.UserBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+.NasaLogo{
+ width: 300px;
+}
+.ImageBlock {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.Image {
+  display: flex;
+
+}
+
+.UserImage {
+  height: 500px;
+  width: 500px;
+  margin-left: 20px;
+}
+
+.TextWrapper {
+  display: flex;
+  padding-left: 60px;
+  width: 350px;
+}
+@media screen and (max-width: 1100px) {
+  .ImageBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TextWrapper {
+    margin-top: 30px;
+    color: white;
+  }
+  .CabinetWrapper{
+    flex-direction: column;
+  }
+  .UserImage {
+    height: 80vh;
+    width: 90vw;
+  }
+  .NasaLogo{
+    width:40vw;
+  }
+}
